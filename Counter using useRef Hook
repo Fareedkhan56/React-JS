@@ -1,0 +1,16 @@
+import React, { useRef } from 'react'
+
+const UserRefComp = () => {
+    const counter = useRef(0);
+    const clicks = () => {
+        counter.current += 1;
+        alert(`You Click ${counter.current} Times`)
+    }
+    return (
+        <div>
+            <button onClick={clicks}>Click Me</button>
+        </div>
+    )
+}
+
+export default UserRefComp
